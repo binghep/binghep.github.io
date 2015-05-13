@@ -1,0 +1,15 @@
+git add selects changes
+
+git commit records changes LOCALLY
+
+git push shares changes
+
+
+---
+git add adds your modified files to the queue to be committed later. Files are not committed
+git commit commits the files that have been added and creates a new revision with a log... If you do not add any files, git will not commit anything. You can combine both actions with git commit -a
+
+git push pushes your changes to the remote repository.
+
+This figure from this git cheat sheet gives a good idea of the work flow
+---
