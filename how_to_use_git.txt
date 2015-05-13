@@ -13,7 +13,7 @@ git push pushes your changes to the remote repository.
 
 This figure from this git cheat sheet gives a good idea of the work flow
 ---
-
+git clone https:....repo path
 git add --all
 git status
 git commit -m "committing"
