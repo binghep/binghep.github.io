@@ -1,31 +1,33 @@
-<html>
+<html ng-app="myApp">
 <head>
-<meta charset="utf-8">
+	<meta charset="utf-8">
     <title>Angular.js Example</title>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
     <script>
-var app = angular.module('myApp', []);
+		var app = angular.module('myApp', []);
 
 app.controller('MainCtrl', function ($scope) {
-$scope.$watch('amountone + amounttwo', function() {
+	$scope.$watch('amountone + amounttwo', function() {
       $scope.ratioone = $scope.amountone / $scope.amounttwo;
       $scope.ratiotwo = $scope.amounttwo / $scope.amountone;
   });
 });
 
-</script>
+	</script>
 </head>
 
 <body>
 <div ng-controller="MainCtrl">
 
 Amount: <input type="number" ng-init="amountone=28" ng-model="amountone"> Value: <input type="number" ng-init="valueone=300" ng-model="valueone">
-<br />
+<br>
 Amount: <input type="number" ng-init="amounttwo=3.5" ng-model="amounttwo"> Value: <input type="number" ng-init="valuetwo=50" ng-model="valuetwo">
-<br />
+<br>
 =========================
-Test ratio: {{ amountone }}/{{ amounttwo}} = {{ ratioone }}<br />
-Test ratio: {{ amounttwo }}/{{ amountone}} = {{ ratiotwo }}<br />
+<br>
+
+Test ratio: {{amountone}}/{{amounttwo}} = {{ratioone}}<br>
+Test ratio: {{amounttwo}}/{{amountone}} = {{ratiotwo}}<br>
 </div>
 </body>
 </html>
